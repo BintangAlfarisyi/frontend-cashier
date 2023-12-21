@@ -3,5 +3,3 @@ const CategoryDetail = ({ params }: { params: { categoryId: string } }) => {
 };
 
 export default CategoryDetail
-
-

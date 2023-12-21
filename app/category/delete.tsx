@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 type Category = {
   id: number;
   name: string;
+  category_id: number;
 };
 
 const API_URL = "http://127.0.0.1:8000/api";
@@ -22,7 +23,7 @@ const DeleteCategory = (category: Category) => {
     let endpoint = `${API_URL}/category/${categoryId}`;
     const data = { name: name };
     await axios.delete(endpoint);
-   
+  
     setIsMutating(false);
     router.refresh();
     setModal(false);
